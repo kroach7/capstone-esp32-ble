@@ -56,6 +56,8 @@ class RelayCharacteristicCallbacks : public BLECharacteristicCallbacks {
 void setup() {
   Serial.begin(115200);
 
+  pinMode(RELAY_PIN, OUTPUT);
+
   // Create the BLE device
   BLEDevice::init("ESP32_SMART_LIVEWELL");
 
